@@ -50,7 +50,7 @@ use pocketmine\event\player\PlayerCommandPreprocessEvent;
 class LobbyItems extends PluginBase implements Listener
 {
 
-	public $prefix = TextFormat::LIGHT_RED . "RushGames" . TextFormat::GRAY . " | " . TextFormat::WHITE;
+	public $prefix = TextFormat::RED . "RushGames" . TextFormat::GRAY . " | " . TextFormat::WHITE;
 	public $heart = array("Hearth111");
 	public $jump = array("Jump222");
 	public $speed = array("Speed333");
@@ -86,7 +86,7 @@ class LobbyItems extends PluginBase implements Listener
 
 		$this->getServer()->getScheduler()->scheduleRepeatingTask(new TypeType($this), 20);
 
-		$this->getServer()->getNetwork()->setName(TextFormat::BOLD . TextFormat:: LIGHT_RED . "RushGames");
+		$this->getServer()->getNetwork()->setName(TextFormat::BOLD . TextFormat::RED . "RushGames");
 
 		$this->getServer()->getDefaultLevel()->setTime(1000);
 		$this->getServer()->getDefaultLevel()->stopTime();
