@@ -228,7 +228,7 @@ class LobbyItems extends PluginBase implements Listener
 		$PushWars = Item::get(355, 1, 1);
 		$PushWars->setCustomName(TextFormat::RESET . TextFormat::BLUE . "PushWars");
 		
-		$StickFight = Item::get(
+		$StickFight = Item::get(369, 1, 1);
 		$StickFight->setCustomName(TextFormat::RESET . TextFormat::GOLD . "StickFight");
 		
 		$FFA = Item::get(267, 1, 1);
