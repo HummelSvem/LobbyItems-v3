@@ -213,7 +213,7 @@ class LobbyItems extends PluginBase implements Listener
 		$exit = Item::get(351, 1, 1);
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
 
-		$GunGame = Item::get(7, 1, 1);
+		$GunGame = Item::get(271, 1, 1);
 		$GunGame->setCustomName(TextFormat::RESET . TextFormat::RED . "GunGame");
 		
 		$KnockFFA = Item::get(280, 1, 1);
@@ -227,6 +227,15 @@ class LobbyItems extends PluginBase implements Listener
 		
 		$PushWars = Item::get(355, 1, 1);
 		$PushWars->setCustomName(TextFormat::RESET . TextFormat::BLUE . "PushWars");
+		
+		$StickFight = Item::get(
+		$StickFight->setCustomName(TextFormat::RESET . TextFormat::GOLD . "StickFight");
+		
+		$FFA = Item::get(267, 1, 1);
+		$FFA->setCustomName(TextFormat::RESET . TextFormat::RED . "FFA");
+		
+		$SkyBlock = Item::get(2, 1, 1);
+		$SkyBlock->setCustomName(TextFormat::RESET . TextFormat::GREEN . "SkyBlock");
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $Citybuild);
@@ -234,6 +243,9 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(4, $KnockFFA);
 		$inv->setItem(6, $MLGRush);
 		$inv->setItem(7, $PushWars);
+		$inv->setItem(2, $StickFight);
+		$inv->setItem(5, $FFA);
+		$inv->setItem(3, $SkyBlock);
 
 	}
 
@@ -601,13 +613,13 @@ class LobbyItems extends PluginBase implements Listener
 		}
 		//run
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "MLGRush") {
-			$event->getPlayer()->transfer("", "");
+			$event->getPlayer()->transfer("play-rushGames.tk", "");
 		}
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "KnockFFA") {
-			$event->getPlayer()->transfer("", "");
+			$event->getPlayer()->transfer("play-rushGames.tk", "");
 		}
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "CityBuild") {
-			$event->getPlayer()->transfer("","");
+			$event->getPlayer()->transfer("play-rushGames.tk","");
 		}
 
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "Rang Info") {
@@ -742,7 +754,7 @@ class LobbyItems extends PluginBase implements Listener
 			
 		}
 		
-		if($in == TextFormat::RESET . TextFormat::GOLD . "Groß") {
+		if($in == TextFormat::RESET . TextFormat::GOLD . "Gross") {
 			
 			$player->sendMessage($this->prefix . TextFormat::GREEN . "Du bist jetzt " . TextFormat::GOLD . "Groß");
 			$player->setDataProperty(Entity::DATA_SCALE, Entity::DATA_TYPE_FLOAT, 1.5);
