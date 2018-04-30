@@ -1,8 +1,8 @@
 name: LobbyItems
-version: LI-2.4
+version: 2.4
 api: 3.0.0-ALPHA12
 main: VL\LobbyItems
-author: VL (Real Author) | Zadezter
+author: PrinxIsLeqit
 commands:
     build:
         description: Lobby with a Build-mode command!
