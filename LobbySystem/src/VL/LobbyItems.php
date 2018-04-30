@@ -50,7 +50,7 @@ use pocketmine\event\player\PlayerCommandPreprocessEvent;
 class LobbyItems extends PluginBase implements Listener
 {
 
-	public $prefix = TextFormat::YELLOW . "TeronixPE" . TextFormat::GRAY . " | " . TextFormat::WHITE;
+	public $prefix = TextFormat::LIGHT_RED . "RushGames" . TextFormat::GRAY . " | " . TextFormat::WHITE;
 	public $heart = array("Hearth111");
 	public $jump = array("Jump222");
 	public $speed = array("Speed333");
@@ -86,7 +86,7 @@ class LobbyItems extends PluginBase implements Listener
 
 		$this->getServer()->getScheduler()->scheduleRepeatingTask(new TypeType($this), 20);
 
-		$this->getServer()->getNetwork()->setName(TextFormat::BOLD . TextFormat::GREEN . "TeronixPE");
+		$this->getServer()->getNetwork()->setName(TextFormat::BOLD . TextFormat:: LIGHT_RED . "RushGames");
 
 		$this->getServer()->getDefaultLevel()->setTime(1000);
 		$this->getServer()->getDefaultLevel()->stopTime();
@@ -227,7 +227,7 @@ class LobbyItems extends PluginBase implements Listener
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $Citybuild);
-		$inv->setItem(1, $Skyblock);
+		$inv->setItem(1, $Bald);
 		$inv->setItem(2, $KnockFFA);
 		$inv->setItem(4, $MLGRush);
 
@@ -436,9 +436,9 @@ class LobbyItems extends PluginBase implements Listener
 		}
 		$inv->setItem(0, $item2);
 		$inv->setItem(1, $item1);
-		$inv->setItem(4, $item3);
+		$inv->setItem(8, $item3);
 		$inv->setItem(7, $item4);
-		$inv->setItem(8, $item5);
+		$inv->setItem(4, $item5);
 
 	}
 
