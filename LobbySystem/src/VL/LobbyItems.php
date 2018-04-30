@@ -213,23 +213,23 @@ class LobbyItems extends PluginBase implements Listener
 		$exit = Item::get(351, 1, 1);
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
 
-		$Skyblock = Item::get(2, 1, 1);
-		$Skyblock->setCustomName(TextFormat::RESET . TextFormat::GOLD . "SkyBlock");
-
-		$Faction = Item::get(322, 1, 1);
-		$Faction->setCustomName(TextFormat::RESET . TextFormat::GOLD . "KnockbackFFA");
+		$Bald = Item::get(2, 1, 1);
+		$Bald->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Bald");
+		
+		$KnockFFA = Item::get(280, 1, 1);
+		$KnockFFA->setCustomName(TextFormat::RESET . TextFormat::GOLD . "KnockFFA");
 
 		$Citybuild = Item::get(138, 1, 1);
-		$Citybuild->setCustomName(TextFormat::RESET . TextFormat::GOLD . "CityBuild");
+		$Citybuild->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Citybuild");
 
-		$sur = Item::get(103, 1, 1);
-		$sur->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Oneline");
+		$MLGRush = Item::get(24, 1, 1);
+		$MLGRush->setCustomName(TextFormat::RESET . TextFormat::GREEN . "MLGRush");
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $Citybuild);
-		$inv->setItem(1, $SkyblocK);
-		$inv->setItem(2, $Oneline);
-		//$inv->setItem(4, $sur);
+		$inv->setItem(1, $Skyblock);
+		$inv->setItem(2, $KnockFFA);
+		$inv->setItem(4, $MLGRush);
 
 	}
 
@@ -292,7 +292,7 @@ class LobbyItems extends PluginBase implements Listener
 		if (!$player->isWhitelisted($name)) {
 			$msg =
 				TextFormat::BOLD . TextFormat::GRAY . "+++-----------+++-----------+++\n" .
-				TextFormat::RESET . TextFormat::GOLD . "TeronixPE" . TextFormat::GRAY . "|" . TextFormat::RED . " WhiteListed\n" .
+				TextFormat::RESET . TextFormat::RED . "RushGames" . TextFormat::GRAY . "|" . TextFormat::RED . " WhiteListed\n" .
 				TextFormat::GOLD . "Wir sind in WartungsArbeiten...";
 			$player->close("", $msg);
 		}
@@ -353,6 +353,9 @@ class LobbyItems extends PluginBase implements Listener
 
 		$item5 = Item::get(421, 0, 1);
 		$item5->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Nick");
+		
+		$item6 = Item::get(57, 0, 1);
+		$item6->setCustomName(TextFormat::RESET . TextFormat::GREEN . "Pets");
 
 		$exit = Item::get(351, 1, 1);
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
@@ -362,6 +365,7 @@ class LobbyItems extends PluginBase implements Listener
 		$inv->setItem(2, $item3);
 		$inv->setItem(3, $item4);
 		$inv->setItem(4, $item5);
+		$inv->setItem(5, $item6);
 		$inv->setItem(8, $exit);
 
 	}
@@ -404,6 +408,9 @@ class LobbyItems extends PluginBase implements Listener
 
 		$item3 = Item::get(264, 0, 1);
 		$item3->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Rang Info");
+		
+		$item5 = Item::get(446, 0, 1);
+		$item5->setCustomName(TextFormat::RESET . TextFormat::BLACK . "Clans");
 
 		if (!in_array($name, $this->showall) && !in_array($name, $this->showvips) && !in_array($name, $this->shownone)) {
 
@@ -427,10 +434,11 @@ class LobbyItems extends PluginBase implements Listener
 			$item4->setCustomName(TextFormat::RESET . TextFormat::GRAY . "Keine Spieler sichtbar");
 
 		}
-		$inv->setItem(1, $item2);
-		$inv->setItem(3, $item1);
-		$inv->setItem(5, $item3);
+		$inv->setItem(0, $item2);
+		$inv->setItem(1, $item1);
+		$inv->setItem(4, $item3);
 		$inv->setItem(7, $item4);
+		$inv->setItem(8, $item5);
 
 	}
 
@@ -588,20 +596,20 @@ class LobbyItems extends PluginBase implements Listener
 
 		}
 		//run
-		if ($in == TextFormat::RESET . TextFormat::GOLD . "SkyBlock") {
-			$event->getPlayer()->transfer("54.37.166.50", "33");
+		if ($in == TextFormat::RESET . TextFormat::GOLD . "MLGRush") {
+			$event->getPlayer()->transfer("", "");
 		}
-		if ($in == TextFormat::RESET . TextFormat::GOLD . "Oneline") {
-			$event->getPlayer()->transfer("54.37.166.50", "90");
+		if ($in == TextFormat::RESET . TextFormat::GOLD . "KnockFFA") {
+			$event->getPlayer()->transfer("", "");
 		}
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "CityBuild") {
-			$event->getPlayer()->transfer("UnexMC.net","7355");
+			$event->getPlayer()->transfer("","");
 		}
 
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "Rang Info") {
 
 			//$this->getRangMenu($player);
-			$event->getPlayer()->sendMessage($this->prefix . TextFormat::RED . "Bald");
+			$event->getPlayer()->sendMessage($this->prefix . TextFormat::RED . "Bald!");
 		}
 
 		if ($in == TextFormat::RESET . TextFormat::GOLD . "Nick") {
