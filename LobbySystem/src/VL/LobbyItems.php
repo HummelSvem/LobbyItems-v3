@@ -408,7 +408,7 @@ class LobbyItems extends PluginBase implements Listener
 		$item1->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Teleporter");
 
 		$item2 = Item::get(54, 0, 1);
-		$item2->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Cosmetics");
+		$item2->setCustomName(TextFormat::RESET . TextFormat::BLUE . "Cosmetics");
 
 		$item3 = Item::get(264, 0, 1);
 		$item3->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Rang Info");
