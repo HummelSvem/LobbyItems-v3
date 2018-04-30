@@ -404,10 +404,10 @@ class LobbyItems extends PluginBase implements Listener
 		$inv = $player->getInventory();
 		$inv->clearAll();
 
-		$item1 = Item::get(368, 0, 1);
+		$item1 = Item::get(345, 0, 1);
 		$item1->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Teleporter");
 
-		$item2 = Item::get(130, 0, 1);
+		$item2 = Item::get(54, 0, 1);
 		$item2->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Cosmetics");
 
 		$item3 = Item::get(264, 0, 1);
