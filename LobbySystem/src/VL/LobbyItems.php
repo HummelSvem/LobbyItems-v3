@@ -213,8 +213,8 @@ class LobbyItems extends PluginBase implements Listener
 		$exit = Item::get(351, 1, 1);
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
 
-		$Bald = Item::get(7, 1, 1);
-		$Bald->setCustomName(TextFormat::RESET . TextFormat::RED . "Bald");
+		$GunGame = Item::get(7, 1, 1);
+		$GunGame->setCustomName(TextFormat::RESET . TextFormat::RED . "GunGame");
 		
 		$KnockFFA = Item::get(280, 1, 1);
 		$KnockFFA->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "KnockFFA");
@@ -225,15 +225,15 @@ class LobbyItems extends PluginBase implements Listener
 		$MLGRush = Item::get(24, 1, 1);
 		$MLGRush->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "MLGRush");
 		
-		$BedWars = Item::get(355, 1, 1);
-		$BedWars->setCustomName(TextFormat::RESET . TextFormat::BLUE . "BedWars");
+		$PushWars = Item::get(355, 1, 1);
+		$PushWars->setCustomName(TextFormat::RESET . TextFormat::BLUE . "PushWars");
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $Citybuild);
-		$inv->setItem(1, $Bald);
+		$inv->setItem(1, $GunGame);
 		$inv->setItem(4, $KnockFFA);
 		$inv->setItem(6, $MLGRush);
-		$inv->setItem(7, $BedWars);
+		$inv->setItem(7, $PushWars);
 
 	}
 
@@ -675,7 +675,7 @@ class LobbyItems extends PluginBase implements Listener
 			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::GOLD . "Diamond" . TextFormat::GRAY . " [===");
 			$player->sendMessage(TextFormat::GOLD . "Preis" . TextFormat::GRAY . ": " . TextFormat::GREEN . "10 Euro");
 			$player->sendMessage(TextFormat::GOLD . "Features" . TextFormat::GRAY . ": ");
-			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Cosmetics");
+			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::BLUE . "Cosmetics");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Farbiger Nametag");
 			
 		}
@@ -685,7 +685,7 @@ class LobbyItems extends PluginBase implements Listener
 			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::GOLD . "Hero" . TextFormat::GRAY . " [===");
 			$player->sendMessage(TextFormat::GOLD . "Preis" . TextFormat::GRAY . ": " . TextFormat::GREEN . "20 Euro");
 			$player->sendMessage(TextFormat::GOLD . "Features" . TextFormat::GRAY . ": ");
-			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Cosmetics");
+			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::BLUE . "Cosmetics");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Doppelte Coins in MiniGames");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "OP Items in CityBuild" . TextFormat::GRAY . " | " . TextFormat::RED . "BALD");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Farbiger Nametag");
@@ -697,7 +697,7 @@ class LobbyItems extends PluginBase implements Listener
 			$player->sendMessage(TextFormat::GRAY . "===] " . TextFormat::GOLD . "Titan" . TextFormat::GRAY . " [===");
 			$player->sendMessage(TextFormat::GOLD . "Preis" . TextFormat::GRAY . ": " . TextFormat::GREEN . "15 Euro");
 			$player->sendMessage(TextFormat::GOLD . "Features" . TextFormat::GRAY . ": ");
-			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Cosmetics");
+			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::BLUE . "Cosmetics");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "Doppelte Coins in MiniGames");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "OP Items in CityBuild" . TextFormat::GRAY . " | " . TextFormat::RED . "BALD");
 			$player->sendMessage(TextFormat::GRAY . "- " . TextFormat::GOLD . "5× Level 3 Kiste" . TextFormat::GRAY . " | " . TextFormat::RED . "BALD");
@@ -705,7 +705,7 @@ class LobbyItems extends PluginBase implements Listener
 			
 		}
 		
-		if($in == TextFormat::RESET . TextFormat::GOLD . "Cosmetics") {
+		if($in == TextFormat::RESET . TextFormat::BLUE . "Cosmetics") {
 			if($player->hasPermission("lobby.cosmetics")) {
 				
 				$this->getCosmetics($player);
