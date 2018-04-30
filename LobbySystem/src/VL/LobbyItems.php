@@ -213,23 +213,27 @@ class LobbyItems extends PluginBase implements Listener
 		$exit = Item::get(351, 1, 1);
 		$exit->setCustomName(TextFormat::RESET . TextFormat::RED . "Exit");
 
-		$Bald = Item::get(2, 1, 1);
-		$Bald->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Bald");
+		$Bald = Item::get(7, 1, 1);
+		$Bald->setCustomName(TextFormat::RESET . TextFormat::RED . "Bald");
 		
 		$KnockFFA = Item::get(280, 1, 1);
-		$KnockFFA->setCustomName(TextFormat::RESET . TextFormat::GOLD . "KnockFFA");
+		$KnockFFA->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "KnockFFA");
 
 		$Citybuild = Item::get(138, 1, 1);
-		$Citybuild->setCustomName(TextFormat::RESET . TextFormat::GOLD . "Citybuild");
+		$Citybuild->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "Citybuild");
 
 		$MLGRush = Item::get(24, 1, 1);
-		$MLGRush->setCustomName(TextFormat::RESET . TextFormat::GREEN . "MLGRush");
+		$MLGRush->setCustomName(TextFormat::RESET . TextFormat::YELLOW . "MLGRush");
+		
+		$BedWars = Item::get(355, 1, 1);
+		$BedWars->setCustomName(TextFormat::RESET . TextFormat::BLUE . "BedWars");
 
 		$inv->setItem(8, $exit);
 		$inv->setItem(0, $Citybuild);
 		$inv->setItem(1, $Bald);
-		$inv->setItem(2, $KnockFFA);
-		$inv->setItem(4, $MLGRush);
+		$inv->setItem(4, $KnockFFA);
+		$inv->setItem(7, $MLGRush);
+		$inv->setItem(8, $BedWars);
 
 	}
 
